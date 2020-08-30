@@ -26,6 +26,16 @@ namespace Selenium_QA_Courses
             wait.Until(ExpectedConditions.TitleContains("Rp.pl"));
         }
 
+        [Test]
+        public void Assignment3()
+        {
+            driver.Url = "http://localhost:8080/litecart/public_html/admin/";
+            driver.FindElement(By.Name("username")).SendKeys("admin");
+            driver.FindElement(By.Name("password")).SendKeys("admin");
+            driver.FindElement(By.Name("login")).Click();
+
+        }
+
         [TearDown]
         public void stop()
         {
